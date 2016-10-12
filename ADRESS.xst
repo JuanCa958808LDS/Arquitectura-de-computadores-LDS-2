@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/Juan Camilo Olmos 95/Desktop/procesadormonocicloLDS95/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Juan Camilo Olmos 95/Desktop/procesadormonocicloLDS95/xst"
+elaborate
+-ifn ADRESS.prj
+-ifmt mixed
