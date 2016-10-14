@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    12:31:51 10/03/2016 
+-- Create Date:    17:35:50 10/14/2016 
 -- Design Name: 
--- Module Name:    RF - Behavioral 
+-- Module Name:    RegisterFile - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -18,11 +18,9 @@
 --
 ----------------------------------------------------------------------------------
 library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_1164.ALL;use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.All;
 use IEEE.NUMERIC_STD.ALL;
-
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 --use IEEE.NUMERIC_STD.ALL;
@@ -32,36 +30,21 @@ use IEEE.NUMERIC_STD.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity RF is
-    Port ( rs : in  STD_LOGIC_VECTOR (4 downto 0);
-           rt : in  STD_LOGIC_VECTOR (4 downto 0);
+entity RegisterFile is
+    Port ( rs1 : in  STD_LOGIC_VECTOR (4 downto 0);
+           rs2 : in  STD_LOGIC_VECTOR (4 downto 0);
            rd : in  STD_LOGIC_VECTOR (4 downto 0);
-           wd : in  STD_LOGIC_VECTOR (31 downto 0);
-           clk : in  STD_LOGIC;
-           w : in  STD_LOGIC;
-           drt : out  STD_LOGIC_VECTOR (31 downto 0);
-           drs : out  STD_LOGIC_VECTOR (31 downto 0));
-end RF;
+           salidaAlu : in  STD_LOGIC_VECTOR (31 downto 0);
+           contenidoR1 : out  STD_LOGIC_VECTOR (31 downto 0);
+           contenidoR2 : out  STD_LOGIC_VECTOR (31 downto 0));
+end RegisterFile;
 
-architecture Arq_RF of RF is
-
-type RAM_RF is array (0 to 31) of std_logic_vector (31 downto 0);
-signal Memory_RAM  : RAM_RF := ( others => X"00000000");
-
+architecture Behavioral of RegisterFile is
 
 begin
 
-dRs<=Memory_RAM(Conv_integer(Rs));
-dRt<=Memory_RAM(Conv_integer(Rt));
+process (rs1,rs2,rd.salidaAlu)
 
-Process(CLK,w,Wd)
-Begin
-	if rising_edge (CLK) then 
-		if (w='1') then
-			Memory_RAM(Conv_integer(Rd))<=Wd;
-		end if;
-	end if;
-end process;
-	
-end Arq_RF;
+
+end Behavioral;
 

@@ -49,7 +49,7 @@ end unidad_de_control;
 architecture Arq_Control of Control is
 
 begin
-process (Opcode,Function1,Zero);
+process (Opcode,Function1,Zero)
 begin
 
 case Opcode is

@@ -1,5 +1,5 @@
 set -tmpdir "E:/procesadormonocicloLDS95/xst/projnav.tmp"
 set -xsthdpdir "E:/procesadormonocicloLDS95/xst"
 elaborate
--ifn Control.prj
+-ifn Instruction_Memory.prj
 -ifmt mixed

@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/Users/Juan Camilo Olmos 95/Desktop/procesadormonocicloLDS95/ADRESS_isim_beh.exe" -prj "C:/Users/Juan Camilo Olmos 95/Desktop/procesadormonocicloLDS95/ADRESS_beh.prj" "work.ADRESS" 
+-intstyle "ise" -incremental -o "G:/procesadormonocicloLDS/test_nPC_isim_beh.exe" -prj "G:/procesadormonocicloLDS/test_nPC_beh.prj" "work.test_nPC" 

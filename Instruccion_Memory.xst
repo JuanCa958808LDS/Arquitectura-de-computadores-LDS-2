@@ -1,5 +1,5 @@
-set -tmpdir "C:/Users/Juan Camilo Olmos 95/Desktop/procesadormonocicloLDS/xst/projnav.tmp"
-set -xsthdpdir "C:/Users/Juan Camilo Olmos 95/Desktop/procesadormonocicloLDS/xst"
+set -tmpdir "F:/procesadormonocicloLDS95/xst/projnav.tmp"
+set -xsthdpdir "F:/procesadormonocicloLDS95/xst"
 elaborate
 -ifn Instruccion_Memory.prj
 -ifmt mixed

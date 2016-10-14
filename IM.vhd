@@ -22,6 +22,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.All;
 use IEEE.NUMERIC_STD.ALL;
+use std.textio.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -48,6 +49,7 @@ begin
 instruccion_memory <= Memory_ROM(Conv_integer(direccion));
 
 end Arq_Instruccion_Memory;
+
 
 
 
